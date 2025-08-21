@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="form-root" stylesheets="@../styles/form_streamers.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.FormStreamersController">
+
+    <!-- 🔹 Definición lógica del grupo de radio -->
+    <fx:define>
+        <ToggleGroup fx:id="grupoActivo" />
+    </fx:define>
+
+    <children>
+        <!-- 🔹 Título -->
+        <Label fx:id="lblTitulo" alignment="CENTER" layoutX="192.0" layoutY="29.0" prefWidth="220.0" styleClass="form-title" text="Gestión de Streamers" />
+
+        <!-- ComboBox -->
+        <Label layoutX="81.0" layoutY="97.0" styleClass="form-label" text="Streamers:" />
+        <ComboBox fx:id="cbStreamer" layoutX="181.0" layoutY="92.0" onAction="#accionCbStreamer" prefHeight="31.0" prefWidth="300" styleClass="form-field" />
+
+        <!-- Nombre -->
+        <Label layoutX="81.0" layoutY="151.0" styleClass="form-label" text="Nombre:" />
+        <TextField fx:id="txtNombre" layoutX="181.0" layoutY="146.0" prefWidth="300" styleClass="form-field" />
+
+        <!-- Activo -->
+        <Label layoutX="81.0" layoutY="191.0" styleClass="form-label" text="Activo:" />
+        <RadioButton fx:id="rbActivoSi" layoutX="181.0" layoutY="191.0" text="Sí">
+         <toggleGroup>
+            <ToggleGroup fx:id="grupoActivo" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="rbActivoNo" layoutX="240.0" layoutY="191.0" text="No" toggleGroup="$grupoActivo" />
+
+        <!-- Fecha -->
+        <Label layoutX="81.0" layoutY="231.0" styleClass="form-label" text="Fecha:" />
+        <DatePicker fx:id="dpFechaCreacion" layoutX="181.0" layoutY="226.0" prefHeight="31.0" prefWidth="150" styleClass="form-field" />
+        <TextField fx:id="txtHoraCreacion" layoutX="341.0" layoutY="226.0" prefWidth="140" promptText="HH:mm:ss" styleClass="form-field" />
+
+        <!-- 🔹 Botones -->
+        <Button fx:id="btnNuevo" layoutX="78.0" layoutY="304.0" onAction="#accionNuevo" styleClass="pc-btn" text="Nuevo" />
+        <Button fx:id="btnGuardar" layoutX="153.0" layoutY="304.0" onAction="#accionGuardar" styleClass="pc-btn" text="Guardar" />
+        <Button fx:id="btnActualizar" layoutX="238.0" layoutY="304.0" onAction="#accionActualizar" styleClass="pc-btn" text="Actualizar" />
+        <Button fx:id="btnBorrar" layoutX="333.0" layoutY="304.0" onAction="#accionBorrar" styleClass="pc-btn" text="Borrar" />
+        <Button fx:id="btnLimpiar" layoutX="413.0" layoutY="304.0" onAction="#accionLimpiar" styleClass="pc-btn" text="Limpiar" />
+        <Button fx:id="btnCancelar" layoutX="242.0" layoutY="357.0" onAction="#accionCancelar" styleClass="pc-btn" text="Cancelar" />
+
+        <!-- 🔹 Separadores -->
+        <Separator layoutX="69.0" layoutY="65.0" prefHeight="2.0" prefWidth="445.0" />
+        <Separator layoutX="62.0" layoutY="280.0" prefHeight="2.0" prefWidth="445.0" />
+    </children>
+</AnchorPane>

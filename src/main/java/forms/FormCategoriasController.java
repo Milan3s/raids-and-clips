@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.stage.Stage;
 
 /**
  * Controlador para el formulario de Categorías (CRUD).
@@ -46,6 +47,10 @@ public class FormCategoriasController implements Initializable {
     private final CategoriaDAO dao = new CategoriaDAO();
     private final ObservableList<Categoria> categorias = FXCollections.observableArrayList();
     private Categoria actual;
+    @FXML
+    private Label lblTitulo;
+    @FXML
+    private Button btnCancelar;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -191,4 +196,13 @@ public class FormCategoriasController implements Initializable {
     private void accionLimpiar(ActionEvent event) {
         limpiar();
     }
+
+    @FXML
+    private void accionCancelar(ActionEvent event) {
+        // Obtiene la ventana actual desde el botón
+        Button btn = (Button) event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.close();
+    }
+
 }

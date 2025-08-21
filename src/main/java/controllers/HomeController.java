@@ -83,7 +83,17 @@ public class HomeController implements Initializable {
             if (fxml == null) {
                 throw new IllegalStateException("No se encontró /views/main.fxml en el classpath");
             }
-            Parent root = FXMLLoader.load(fxml);
+
+            FXMLLoader loader = new FXMLLoader(fxml);
+            Parent root = loader.load();
+
+            // 👉 Aquí ya puedes obtener el MainController
+            MainController mainController = loader.getController();
+
+            // Le pasamos el HostServices que guardamos en HomeController
+            if (hostServices != null) {
+                mainController.setHostServices(hostServices);
+            }
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle("Twitch Raids & Clips - Main");

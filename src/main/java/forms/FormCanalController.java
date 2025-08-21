@@ -15,10 +15,10 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
+import javafx.stage.Stage;
 
 /**
- * Controlador del formulario de Canal
- * Gestiona CRUD sobre la tabla canales
+ * Controlador del formulario de Canal Gestiona CRUD sobre la tabla canales
  *
  * @author Milanes
  */
@@ -51,6 +51,10 @@ public class FormCanalController implements Initializable {
 
     // 🔹 Formatos de fecha/hora
     private final DateTimeFormatter formatterHora = DateTimeFormatter.ofPattern("HH:mm:ss");
+    @FXML
+    private Label lblTitulo;
+    @FXML
+    private Button btnCancelar;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -191,4 +195,13 @@ public class FormCanalController implements Initializable {
     private void accionLimpiar(ActionEvent event) {
         limpiarFormulario();
     }
+
+    @FXML
+    private void accionCancelar(ActionEvent event) {
+        // Cierra la ventana actual
+        Button btn = (Button) event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.close();
+    }
+
 }

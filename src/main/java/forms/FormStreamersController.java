@@ -31,8 +31,6 @@ public class FormStreamersController implements Initializable {
     private TextField txtHoraCreacion;
 
     @FXML
-    private ToggleGroup tgActivo;
-    @FXML
     private RadioButton rbActivoSi;
     @FXML
     private RadioButton rbActivoNo;
@@ -48,6 +46,7 @@ public class FormStreamersController implements Initializable {
     private Button btnBorrar;
     @FXML
     private Button btnGuardar;
+    @FXML
     private Button btnCancelar;
 
     /* ==== Estado/control ==== */
@@ -56,6 +55,10 @@ public class FormStreamersController implements Initializable {
     private static final DateTimeFormatter HORA = DateTimeFormatter.ofPattern("HH:mm:ss");
     @FXML
     private Button btnLimpiar;
+    @FXML
+    private Label lblTitulo;
+    @FXML
+    private ToggleGroup grupoActivo;
 
     /* ================= Ciclo de vida ================= */
     @Override
@@ -211,6 +214,7 @@ public class FormStreamersController implements Initializable {
         }
     }
 
+    @FXML
     private void accionCancelar(ActionEvent event) {
         // Obtiene el Stage actual desde cualquier nodo del formulario
         Stage stage = (Stage) btnCancelar.getScene().getWindow();

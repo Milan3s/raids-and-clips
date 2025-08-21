@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane prefHeight="827.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+
+    <!-- Sidebar reutilizable (está en la misma carpeta views/) -->
+    <left>
+        <fx:include source="sidebar.fxml" />
+    </left>
+
+    <!-- Área central -->
+    <center>
+        <StackPane id="contentArea" fx:id="contentArea" prefHeight="802.0" prefWidth="910.0" />
+    </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem fx:id="btnSalir" mnemonicParsing="false" onAction="#accionSalir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ver Licencia">
+            <items>
+              <MenuItem fx:id="btnVerLicencia" mnemonicParsing="false" onAction="#accionVerLicencia" text="Licencia" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem fx:id="btnAcercaDe" mnemonicParsing="false" onAction="#accionAcercaDe" text="Acerca de" />
+                  <MenuItem fx:id="btnRepositorio" mnemonicParsing="false" onAction="#accionRepositorio" text="Repositorio" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+
+</BorderPane>

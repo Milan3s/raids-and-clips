@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="373.0" prefWidth="600.0" styleClass="form-root" stylesheets="@../styles/form_raid.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.FormRaidController">
+
+    <children>
+        <!-- 🔹 Título -->
+        <Label fx:id="lblTitulo" alignment="CENTER" layoutX="197.0" layoutY="39.0" prefWidth="220.0" styleClass="form-title" text="Gestión de Raids" />
+
+        <!-- Raid existente -->
+        <Label layoutX="105.0" layoutY="104.0" styleClass="form-label" text="Raids:" />
+        <ComboBox fx:id="cbRaid" layoutX="205.0" layoutY="99.0" onAction="#accionCbRaid" prefWidth="300" styleClass="form-field" />
+
+        <!-- Streamer -->
+        <Label layoutX="105.0" layoutY="144.0" styleClass="form-label" text="Streamer:" />
+        <ComboBox fx:id="cbStreamer" layoutX="205.0" layoutY="139.0" prefWidth="300" styleClass="form-field" />
+
+        <!-- Canal -->
+        <Label layoutX="105.0" layoutY="184.0" styleClass="form-label" text="Canal:" />
+        <ComboBox fx:id="cbCanal" layoutX="205.0" layoutY="179.0" prefWidth="300" styleClass="form-field" />
+
+        <!-- Fecha y hora -->
+        <Label layoutX="105.0" layoutY="224.0" styleClass="form-label" text="Fecha:" />
+        <DatePicker fx:id="dpFecha" layoutX="205.0" layoutY="219.0" prefHeight="31.0" prefWidth="150" styleClass="form-field" />
+        <TextField fx:id="txtHora" layoutX="365.0" layoutY="219.0" prefWidth="140" promptText="HH:mm:ss" styleClass="form-field" />
+
+        <!-- 🔹 Botones -->
+        <Button fx:id="btnNuevo" layoutX="106.0" layoutY="302.0" onAction="#accionNuevo" styleClass="pc-btn" text="Nuevo" />
+        <Button fx:id="btnGuardar" layoutX="181.0" layoutY="302.0" onAction="#accionGuardar" styleClass="pc-btn" text="Guardar" />
+        <Button fx:id="btnActualizar" layoutX="266.0" layoutY="302.0" onAction="#accionActualizar" styleClass="pc-btn" text="Actualizar" />
+        <Button fx:id="btnBorrar" layoutX="361.0" layoutY="302.0" onAction="#accionBorrar" styleClass="pc-btn" text="Borrar" />
+        <Button fx:id="btnLimpiar" layoutX="441.0" layoutY="302.0" onAction="#accionLimpiar" styleClass="pc-btn" text="Limpiar" />
+        <Button fx:id="btnCancelar" layoutX="270.0" layoutY="358.0" onAction="#accionCancelar" styleClass="pc-btn" text="Cancelar" />
+
+        <!-- 🔹 Separadores -->
+        <Separator layoutX="70.0" layoutY="71.0" prefHeight="3.0" prefWidth="471.0" />
+        <Separator layoutX="62.0" layoutY="280.0" prefHeight="3.0" prefWidth="485.0" />
+    </children>
+</AnchorPane>

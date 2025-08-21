@@ -48,6 +48,10 @@ public class FormRaidController implements Initializable {
     private final ObservableList<Canal> canales = FXCollections.observableArrayList();
 
     private final DateTimeFormatter TIME_FMT = DateTimeFormatter.ofPattern("HH:mm[:ss]");
+    @FXML
+    private Label lblTitulo;
+    @FXML
+    private Button btnCancelar;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -312,6 +316,10 @@ public class FormRaidController implements Initializable {
         Alert a = new Alert(Alert.AlertType.ERROR, msg, ButtonType.OK);
         a.setHeaderText(null);
         a.showAndWait();
+    }
+
+    @FXML
+    private void accionCancelar(ActionEvent event) {
     }
 
     // ------------------ DTOs de ejemplo ------------------

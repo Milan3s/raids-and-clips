@@ -187,5 +187,8 @@ public class StreamersController implements Initializable {
 
     @FXML
     private void accionBuscar(KeyEvent event) {
+        final String texto = txtBuscar.getText() == null ? "" : txtBuscar.getText().trim().toLowerCase();
+        filtered.setPredicate(s -> texto.isEmpty() || s.getNombre().toLowerCase().contains(texto));
     }
+
 }

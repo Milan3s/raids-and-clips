@@ -17,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 /**
  * Controlador para formulario Clips
@@ -54,6 +55,10 @@ public class FormClipsController implements Initializable {
     private final DateTimeFormatter formatterHora = DateTimeFormatter.ofPattern("HH:mm:ss");
 
     private Clip clipActual;
+    @FXML
+    private Label lblTitulo;
+    @FXML
+    private Button btnCancelar;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -208,4 +213,12 @@ public class FormClipsController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.ERROR, msg, ButtonType.OK);
         alert.showAndWait();
     }
+
+    @FXML
+    private void accionCancelar(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.close();
+    }
+
 }

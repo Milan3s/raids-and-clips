@@ -1,0 +1,4 @@
+--patch-module
+app.raids_and_clips=_
+--add-reads
+app.raids_and_clips=ALL-UNNAMED
