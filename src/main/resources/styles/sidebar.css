@@ -1,0 +1,49 @@
+/* ===== Sidebar ===== */
+.pc-sidebar {
+    -fx-background-color: #f8f9fa;   /* gris claro */
+    -fx-padding: 15;
+    -fx-spacing: 12;
+    -fx-alignment: top-center;
+    -fx-border-color: #d0d7e2;
+    -fx-border-width: 0 1 0 0;      /* borde derecho */
+}
+
+/* ===== Título del sidebar ===== */
+#sb-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* ===== Botones del sidebar ===== */
+.pc-sidebar .pc-btn {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+    -fx-padding: 8 14 8 14;
+    -fx-pref-width: 160;
+}
+
+/* Hover */
+.pc-sidebar .pc-btn:hover {
+    -fx-background-color: #f5f5f5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);
+}
+
+/* Pulsado */
+.pc-sidebar .pc-btn:pressed {
+    -fx-background-color: #e0e0e0;
+    -fx-effect: none;
+}
+
+/* Estado activo (opción seleccionada en el menú) */
+.pc-sidebar .pc-btn.is-active {
+    -fx-background-color: #4C8DF6;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #4C8DF6;
+}

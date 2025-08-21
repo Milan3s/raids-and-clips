@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="sidebar" fx:id="sidebar" alignment="TOP_CENTER" prefHeight="364.0" prefWidth="204.0" spacing="10.0" styleClass="pc-sidebar" stylesheets="@../styles/sidebar.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SidebarController">
+
+    <children>
+        <Label id="sb-title" alignment="CENTER" prefHeight="17.0" prefWidth="127.0" styleClass="pc-heading" text="Recordatorios">
+            <VBox.margin>
+                <Insets bottom="20.0" top="20.0" />
+            </VBox.margin>
+        </Label>
+
+        <Button id="nav-streamers" fx:id="btnStreamers1" onAction="#showStreamers" prefHeight="25.0" prefWidth="160.0" styleClass="pc-btn" text="Streamers" />
+
+        <Button id="nav-categorias" fx:id="btnCategorias" onAction="#showCategorias" prefHeight="25.0" prefWidth="160.0" styleClass="pc-btn" text="Categorias" />
+
+        <Button id="nav-canal" fx:id="btnCanal" onAction="#showChannels" prefHeight="25.0" prefWidth="160.0" styleClass="pc-btn" text="Canal" />
+
+        <Button id="nav-raids" fx:id="btnRaids" onAction="#showRaids" prefHeight="25.0" prefWidth="160.0" styleClass="pc-btn" text="Raids" />
+
+        <Button id="nav-clips" fx:id="btnClips" onAction="#showClips" prefHeight="25.0" prefWidth="160.0" styleClass="pc-btn" text="Clips" />
+      <Button id="nav-clips" fx:id="btnSalir" onAction="#showSalir" prefHeight="25.0" prefWidth="160.0" styleClass="pc-btn" text="Salir" />
+    </children>
+</VBox>

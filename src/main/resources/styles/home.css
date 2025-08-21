@@ -1,0 +1,55 @@
+/* ===== Raíz del panel ===== */
+.pc-root {
+    -fx-background-color: white;        /* fondo blanco */
+}
+
+/* ===== Título y headings ===== */
+.pc-title { 
+    -fx-fill: #f80000; 
+    -fx-font-weight: bold;
+}
+.pc-heading { 
+    -fx-text-fill: #000000; 
+    -fx-font-weight: bold;
+}
+
+/* ===== Párrafos/copy ===== */
+.pc-copy {
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+/* ===== Footer y numeración ===== */
+.pc-footer { -fx-text-fill: #000000; }
+.pc-num    { -fx-text-fill: #f80000; -fx-font-weight: bold; }
+
+/* ===== Botones ===== */
+.pc-btn {
+    -fx-background-color: #e0e0e0;      /* gris base */
+    -fx-text-fill: #000000;             /* texto negro */
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-padding: 8 14 8 14;
+    -fx-effect: null;
+    -fx-translate-y: 0;
+}
+
+/* Hover: gris más claro, texto negro */
+.pc-btn:hover {
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #000000;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 8, 0, 0, 2);
+    -fx-translate-y: -1;
+    -fx-cursor: hand;
+}
+
+/* Pulsado */
+.pc-btn:pressed {
+    -fx-background-color: #d6d6d6;
+    -fx-text-fill: #000000;
+    -fx-effect: none;
+    -fx-translate-y: 0;
+}

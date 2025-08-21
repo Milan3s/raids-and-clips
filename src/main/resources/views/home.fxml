@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="623.0" prefWidth="723.0" styleClass="pc-root" stylesheets="@../styles/home.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <children>
+      <!-- Título principal -->
+      <Text layoutX="228.0" layoutY="63.0" styleClass="pc-title" text="Estimado usuario lea atentamente">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+
+      <!-- Bienvenida -->
+      <Text layoutX="97.0" layoutY="129.0" styleClass="pc-heading" text="Bienvenido a la Aplicación">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Separator layoutX="105.0" layoutY="138.0" prefWidth="200.0" />
+
+      <Label layoutX="63.0" layoutY="143.0" prefHeight="73.0" prefWidth="307.0" styleClass="pc-copy" text="Esta apliación esta desarrollada para ayudar al streamer, para que no repita raids, y tenga un recordatorio de las visitas que ha ido haciendo a lo largo del año." wrapText="true" />
+
+      <!-- Descripción -->
+      <Text layoutX="148.0" layoutY="237.0" styleClass="pc-heading" text="Descripción" />
+      <Separator layoutX="108.0" layoutY="246.0" prefWidth="200.0" />
+
+      <Label layoutX="63.0" layoutY="253.0" prefHeight="58.0" prefWidth="307.0" styleClass="pc-copy" text="Puede administrar : Canales, Raids, Categorias y guardar sobre todo los Clips que le han ido realizando durante el directo en el día." wrapText="true" />
+
+      <!-- Prerrequisitos -->
+      <Text layoutX="145.0" layoutY="349.0" styleClass="pc-heading" text="Prerequisitos" />
+      <Separator layoutX="110.0" layoutY="361.0" prefWidth="200.0" />
+
+      <Label layoutX="58.0" layoutY="364.0" prefHeight="79.0" prefWidth="307.0" styleClass="pc-copy" text="Utilización: Para poder utilizar la aplicación debes tener instalado el servidor XAMPP y la libreria de Java que va en el manual del pdf del Manual de Usuario. Para que funcione debe utilizarse al pie de la letra." wrapText="true" />
+
+      <!-- Acciones -->
+      <Text layoutX="450.0" layoutY="134.0" styleClass="pc-heading" text="Acciones antes de usar" />
+      <Separator layoutX="379.0" layoutY="89.0" orientation="VERTICAL" prefHeight="369.0" prefWidth="7.0" />
+
+      <Label layoutX="431.0" layoutY="176.0" styleClass="pc-num" text="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnManualUsuario" layoutX="453.0" layoutY="167.0" onAction="#accionManualUsuario" prefHeight="35.0" prefWidth="176.0" styleClass="pc-btn" text="Manual de Usuario" />
+
+      <Label layoutX="432.0" layoutY="225.0" styleClass="pc-num" text="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnInstalarXampp" layoutX="453.0" layoutY="216.0" onAction="#accionInstalarXampp" prefHeight="35.0" prefWidth="176.0" styleClass="pc-btn" text="Abrir XAMPP" />
+
+      <Label layoutX="432.0" layoutY="275.0" styleClass="pc-num" text="3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnIniciar" layoutX="453.0" layoutY="265.0" onAction="#accionIniciarApp" prefHeight="35.0" prefWidth="176.0" styleClass="pc-btn" text="Iniciar App" />
+
+      <Button fx:id="btnLicencia" layoutX="455.0" layoutY="314.0" onAction="#accionLicencia" prefHeight="35.0" prefWidth="176.0" styleClass="pc-btn" text="Ver Licencia" />
+
+      <Button fx:id="btnCerrar" layoutX="453.0" layoutY="368.0" onAction="#accionCerrar" prefHeight="35.0" prefWidth="176.0" styleClass="pc-btn" text="Cerrar" />
+
+      <!-- Estado BD (el controller alterna db-ok / db-ko) -->
+      <Label fx:id="sms_conexiondb" alignment="CENTER" layoutX="175.0" layoutY="502.0" prefHeight="35.0" prefWidth="385.0" styleClass="pc-copy" />
+
+      <!-- Footer -->
+      <Separator layoutX="63.0" layoutY="456.0" prefHeight="3.0" prefWidth="579.0" />
+      <Separator layoutX="63.0" layoutY="88.0" prefHeight="3.0" prefWidth="579.0" />
+
+      <Label layoutX="286.0" layoutY="559.0" styleClass="pc-footer" text="© Desarrollado por Soujirito" />
+   </children>
+</AnchorPane>
